@@ -1,6 +1,7 @@
-import pygame #look at like 141
+#import pygame #look at like 141
 #import game
 #from game import runGame
+from introduction import intro
 
 import os
 from os import system #this is a core python package
@@ -75,25 +76,6 @@ def friday(audio_string):
     print(audio_string)
     os.remove(audio_file)
 
-# this is the function that acts when user responds to being 'male' onto terminal
-def male():
-    hour = int(datetime.datetime.now().hour)
-    if hour>=0 and hour<12:
-        return friday("Good morning sir!")
-    elif hour>= 12 and hour < 18:
-        return friday("Good afternoon sir!")
-    else:
-        return friday("Good evening sir!")
-# this is the function that acts when user responds to being 'female' onto terminal
-def female():
-    hour = int(datetime.datetime.now().hour)
-    if hour>=0 and hour<12:
-        return friday("Good morning madam!")
-    elif hour>= 12 and hour < 18:
-        return friday("Good afternoon madam!")
-    else:
-        return friday("Good evening madam!")
-
 # now let's start coding the response + interaction 
 # get_bot_response function with user_response inside
 def get_bot_response(user_response):
@@ -137,22 +119,20 @@ def get_bot_response(user_response):
         return exit() #exits function, while loop, and program upon command
 
 
-# below is the beginning of what user will initially hear when you run the program
-friday('Hello. Are you a male or female? Please type your response in the terminal to tell me')
-gender = input("Are you a 'male' or 'female.' Please type your response in terminal:  "+ "")
 
-if gender == 'male':
-    male()
-elif gender == 'female':
-    female()
-friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-friday("So, how may I help you?")
+# below is the beginning of what user will initially hear when you run the program
+friday('Hello! Are you a male or a female?')
+friday('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
+friday('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, which one do you consider yourself as?')
+#friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+#friday("So, how may I help you?")
 
 #now, we are creating a while loop to continuously have computer listen to what I am saying
 time.sleep(1) #waits however many seconds we want
 
 #while loop to allow program to continue to listen to user and respond + records and deletes audio once finished
 while 1:
-    user_response = record_audio() 
+    user_response = record_audio()
+    intro(user_response)
     get_bot_response(user_response)
 
