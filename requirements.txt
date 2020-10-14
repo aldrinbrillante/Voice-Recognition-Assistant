@@ -1,0 +1,28 @@
+Install & import Requirements for Project 
+
+
+#make sure to have python 3 interpreter ctrl+shift+P 
+
+#pip3 install speechrecognition
+#this is google's library performing speech recog API
+import speech_recognition
+
+#python time() and datetime() methods for current
+import time
+import datetime
+
+# Install pyaudio:   pip3 install pyaudio
+# Needed to use the microphone
+import pyaudio
+
+# import webbrowser package 
+import webbrowser
+
+# pip3 install gTTS : use google text to speech interface; whatever we pass in as text, it will create an audio file to speak
+from gtts import gTTS
+
+# pip3 install playsound : make sure to also use another package called 'playsound.' If we don't use this, itll open up your defauly sound/audio player to respond... and we don't want that.
+import playsound
+
+# pip3 install pyobjc : this has app kit that playsound depends on. PyObjC is a bridge between Python and Objective-C. 
+import PyObjCTools
