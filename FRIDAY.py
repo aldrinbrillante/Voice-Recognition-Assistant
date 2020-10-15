@@ -36,6 +36,11 @@ import playsound
 # pip3 install pyobjc : this has app kit that playsound depends on. PyObjC is a bridge between Python and Objective-C. 
 import PyObjCTools 
 
+# pip3 install moviepy
+from moviepy.editor import VideoFileClip
+import pygame
+
+
 ##########################################################################################################
 # Import all your needed files/functions into this main program, FRIDAY.py
 ###########################################################################################################
@@ -90,24 +95,26 @@ def friday(audio_string):
     os.remove(audio_file)
 
 ##########################################################################################################
-# create initial screen for chat bot 
+# create main bot screen for chat bot 
 ###########################################################################################################
 
-# create variable of value tkinter to implement initial screen
-app=Tk()
-#screen title
-app.title("Friday Chat Bot")
-#set width and height of screen 
-screen = Canvas(app,width=926,height=720)
-# set image of screen
-image=ImageTk.PhotoImage(Image.open("friday.png"))
-screen.create_image(0,0,anchor=NW,image=image)
-screen.pack()
-app.mainloop()
+pygame.display.set_caption('My video!')
+
+clip = VideoFileClip('friday.mov')
+clip.preview()
+pygame.quit()
 
 ##########################################################################################################
 # Initial script when chat bot program is running
 ###########################################################################################################
+
+
+##########################################################################################################
+#  extra temp notes:
+# while loop 
+# while image is open, then FRIDAY 
+# 
+#############################################################################
 
 #friday('Hello! Are you a male or a female?')
 #friday('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
