@@ -16,6 +16,7 @@ import datetime
 
 import tkinter
 
+# from tkinter import all
 from tkinter import *
 
 from PIL import ImageTk,Image
@@ -38,14 +39,19 @@ import PyObjCTools
 ##########################################################################################################
 # Import all your needed files/functions into this main program, FRIDAY.py
 ###########################################################################################################
+
 from introduction import intro
+from general_response import gen_response
 
-
+##########################################
 # initialize recognizer
 # responsible for recognizing speech 
+##########################################
 r = sr.Recognizer()
 
-
+##########################################
+# function to record audio
+##########################################
 #create function to record audio
 def record_audio(ask=False): #setting optional ask argument to False
     with sr.Microphone() as source:
@@ -83,62 +89,26 @@ def friday(audio_string):
     print(audio_string)
     os.remove(audio_file)
 
-# now let's start coding the response + interaction 
-# get_bot_response function with user_response inside
-def get_bot_response(user_response):
-    #add the required lists for class grade
-    food_good = ["That sounds delicious", "You are making me hungry now", "Let's forget this class and drive to Pizza Hut. Just me and you. Just kidding. Unless you are down? ha. ha. ha"]
-    food_bad = ["I cannot believe you eat that" , "Wow. I thought you had better taste" , "you know what. my mother is calling me. bye"]
-    # get a random word from the list food_good and food_bad
-    good = random.choice(food_good)
-    bad = random.choice(food_bad)
-
-    #below are the if statement in get_bot_response() for scripted conversation purposes
-    # if "what is your name" is heard in user_response google_audio recording:
-    if "what is your name" in user_response:
-        return friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
-    elif "what is your purpose" in user_response:
-        return friday("My purpose of creation is to give Aldrin Brillantay a good grade in school. I serve other purposes as well. I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food. Would you like to talk about food?")
-    elif "I would love to talk about food" in user_response:
-        return friday("Okay great! What do you like better? Pizza or Calzones?")
-    elif "I like pizza" in user_response:
-        return friday(good) 
-    elif "I like calzones" in user_response:
-        return friday(bad)
-    elif 'search' in user_response:
-        friday("What do you want to search for?")
-        search = record_audio("Please say what you want to search for: ")
-        url = "https://google.com/search?q=" + search
-        webbrowser.get().open(url)
-        return friday("Here is what I found for " + search)
-    elif 'find location' in user_response:
-        location = record_audio("What is the location?: ")
-        url = "https://google.nl/maps/place/" + location + "/&amp;"
-        webbrowser.get().open(url)
-        return friday("Here is the location of " + location)
-    elif 'find place' in user_response:
-        location = record_audio("What is the location?: ")
-        url = "https://google.nl/maps/search/" + location + "/&amp;"
-        webbrowser.get().open(url)
-        return friday("Here is the location of " + location)
-    elif "exit" in user_response:
-        friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
-        return exit() #exits function, while loop, and program upon command
-
-
-
 ##########################################################################################################
-# below is the beginning of what user will initially hear when you run the main program: FRIDAY.py
+# create initial screen for chat bot 
 ###########################################################################################################
+
+# create variable of value tkinter to implement initial screen
 app=Tk()
+#screen title
 app.title("Friday Chat Bot")
 #set width and height of screen 
 screen = Canvas(app,width=926,height=720)
+# set image of screen
 image=ImageTk.PhotoImage(Image.open("friday.png"))
-
 screen.create_image(0,0,anchor=NW,image=image)
 screen.pack()
 app.mainloop()
+
+##########################################################################################################
+# Initial script when chat bot program is running
+###########################################################################################################
+
 #friday('Hello! Are you a male or a female?')
 #friday('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
 #friday('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
@@ -151,5 +121,5 @@ time.sleep(1) #waits however many seconds we want
 while 1:
     user_response = record_audio()
     intro(user_response)
-    get_bot_response(user_response)
+    gen_response(user_response)
 
