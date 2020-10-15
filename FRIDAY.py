@@ -1,11 +1,8 @@
-#import pygame #look at like 141
-#import game
-#from game import runGame
-from introduction import intro
-
+##########################################################################################################
+# Initial Imports needed to create voice chat bot
+###########################################################################################################
 import os
 from os import system #this is a core python package
-
 import random #you want to randomly generate a file name for the audio file
 
 #make sure to have python 3 interpreter ctrl+shift+P 
@@ -25,16 +22,18 @@ import pyaudio
 
 # import webbrowser package 
 import webbrowser
-
-
 # pip3 install gTTS : use google text to speech interface; whatever we pass in as text, it will create an audio file to speak
 from gtts import gTTS
-
 # pip3 install playsound : make sure to also use another package called 'playsound.' If we don't use this, itll open up your defauly sound/audio player to respond... and we don't want that.
 import playsound
-
 # pip3 install pyobjc : this has app kit that playsound depends on. PyObjC is a bridge between Python and Objective-C. 
 import PyObjCTools 
+
+##########################################################################################################
+# Import all your needed files/functions into this main program, FRIDAY.py
+###########################################################################################################
+from introduction import intro
+
 
 
 # initialize recognizer
@@ -66,7 +65,10 @@ def record_audio(ask=False): #setting optional ask argument to False
         # return user_response 
         return user_response
 
-#this while be friday's(jarvis') function; uses a temp saved audio file and then deletes it upon 'exit' command 
+
+###############################################################################################################
+# this will be friday's playsound function; uses a temp saved audio file and then deletes it upon 'exit' command 
+################################################################################################################
 def friday(audio_string):
     tts = gTTS(text=audio_string, lang='en') 
     r = random.randint(1, 10000000)
@@ -120,12 +122,13 @@ def get_bot_response(user_response):
 
 
 
-# below is the beginning of what user will initially hear when you run the program
-friday('Hello! Are you a male or a female?')
-friday('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
-friday('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, which one do you consider yourself as?')
-#friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-#friday("So, how may I help you?")
+##########################################################################################################
+# below is the beginning of what user will initially hear when you run the main program: FRIDAY.py
+###########################################################################################################
+#friday('Hello! Are you a male or a female?')
+#friday('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
+#friday('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
+friday('which one do you consider yourself as?')
 
 #now, we are creating a while loop to continuously have computer listen to what I am saying
 time.sleep(1) #waits however many seconds we want
