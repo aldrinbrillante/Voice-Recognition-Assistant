@@ -132,7 +132,7 @@ def get_bot_response(user_response):
 ###########################################################################################################
 app=Tk()
 app.title("Friday Chat Bot")
-#set width and height
+#set width and height of screen 
 screen = Canvas(app,width=926,height=720)
 image=ImageTk.PhotoImage(Image.open("friday.png"))
 
