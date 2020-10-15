@@ -98,7 +98,7 @@ def friday(audio_string):
 # create main bot screen for chat bot 
 ###########################################################################################################
 
-pygame.display.set_caption('My video!')
+pygame.display.set_caption('Friday Chat Bot')
 
 clip = VideoFileClip('friday.mov')
 clip.preview()
