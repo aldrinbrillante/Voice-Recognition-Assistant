@@ -39,8 +39,6 @@ import PyObjCTools
 # Import all your needed files/functions into this main program, FRIDAY.py
 ###########################################################################################################
 from introduction import intro
-from initial_window import startup_screen
-
 
 
 # initialize recognizer
@@ -133,18 +131,14 @@ def get_bot_response(user_response):
 # below is the beginning of what user will initially hear when you run the main program: FRIDAY.py
 ###########################################################################################################
 app=Tk()
-
+app.title("Friday Chat Bot")
 #set width and height
-
 screen = Canvas(app,width=926,height=720)
-
-
 image=ImageTk.PhotoImage(Image.open("friday.png"))
 
 screen.create_image(0,0,anchor=NW,image=image)
 screen.pack()
 app.mainloop()
-#startup_screen()
 #friday('Hello! Are you a male or a female?')
 #friday('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
 #friday('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
