@@ -92,3 +92,4 @@ if 6-10,
 
 '''
 vreea("Okay. Let me tell you your options of conversation")
+vreea("Okay test 1 2 3 4 ")
