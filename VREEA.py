@@ -113,7 +113,8 @@ pygame.quit()
 #  extra temp notes:
 # while loop 
 # while image is open, then vreea 
-# 
+# incorporate  keeping indow into game loop 
+# cowork: inc t2s into game loop of vreea 
 #############################################################################
 
 #vreea('Hello! Are you a male or a female?')
