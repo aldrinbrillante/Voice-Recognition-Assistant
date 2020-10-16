@@ -17,7 +17,7 @@ def trialGame():
 
     # Initialize Pygame
     pygame.init()
-    pygame.display.set_caption('Friday')
+    pygame.display.set_caption('vreea')
 
     # Set up the drawing window
     screen = pygame.display.set_mode([500, 500])

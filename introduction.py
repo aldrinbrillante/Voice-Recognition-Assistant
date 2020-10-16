@@ -9,9 +9,9 @@ from gtts import gTTS
 import playsound
 
 ##########################################################################################################
-# friday(audio_string) function
+# vreea(audio_string) function
 ###########################################################################################################
-def friday(audio_string):
+def vreea(audio_string):
     tts = gTTS(text=audio_string, lang='en') 
     r = random.randint(1, 10000000)
     audio_file = "audio-" + str(r) + ".mp3"
@@ -26,17 +26,17 @@ def friday(audio_string):
 def male():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
-        friday("Good morning sir!")
-        friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-        return friday("So, how may I help you?")
+        vreea("Good morning sir!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        return vreea("So, how may I help you?")
     elif hour>= 12 and hour < 18:
-        friday("Good afternoon sir!")
-        friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-        return friday("So, how may I help you?")
+        vreea("Good afternoon sir!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        return vreea("So, how may I help you?")
     else:
-        friday("Good evening sir!")
-        friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-        return friday("So, how may I help you?")
+        vreea("Good evening sir!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        return vreea("So, how may I help you?")
 
 
 
@@ -46,17 +46,17 @@ def male():
 def female():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
-        friday("Good morning madam!")
-        friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-        return friday("So, how may I help you?")
+        vreea("Good morning madam!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        return vreea("So, how may I help you?")
     elif hour>= 12 and hour < 18:
-        friday("Good afternoon madam!")
-        friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-        return friday("So, how may I help you?")
+        vreea("Good afternoon madam!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        return vreea("So, how may I help you?")
     else:
-        friday("Good evening madam!")
-        friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-        return friday("So, how may I help you?")
+        vreea("Good evening madam!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        return vreea("So, how may I help you?")
 
 
 
@@ -66,21 +66,21 @@ def female():
 def decline_to_answer():
     hour = int(datetime.datetime.now().hour) 
     if hour>=0 and hour<12:
-        friday("Okay then. Well, good morning to you, you beautiful human being!")
-        friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-        return friday("So, how may I help you?")
+        vreea("Okay then. Well, good morning to you, you beautiful human being!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        return vreea("So, how may I help you?")
     elif hour>= 12 and hour < 18:
-        friday("Okay then. Well, Good afternoon to you, you beautiful human being!")
-        friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-        return friday("So, how may I help you?")
+        vreea("Okay then. Well, Good afternoon to you, you beautiful human being!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        return vreea("So, how may I help you?")
     else:
-        friday("Okay then. Well, Good evening to you, you beautiful human beaing!")
-        friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
-        return friday("So, how may I help you?")
+        vreea("Okay then. Well, Good evening to you, you beautiful human beaing!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        return vreea("So, how may I help you?")
 
 
 ##########################################################################################################
-# introduction function that is called in main file, FRIDAY.py
+# introduction function that is called in main file, vreea.py
 ###########################################################################################################
 def intro(user_response):
     if "I am a dude" in user_response:

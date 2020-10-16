@@ -20,10 +20,10 @@ import speech_recognition as sr
 r = sr.Recognizer()
 
 ##########################################################################################################
-# friday(audio_string) function
+# vreea(audio_string) function
 ###########################################################################################################
 
-def friday(audio_string):
+def vreea(audio_string):
     tts = gTTS(text=audio_string, lang='en') 
     r = random.randint(1, 10000000)
     audio_file = "audio-" + str(r) + ".mp3"
@@ -75,31 +75,44 @@ def gen_response(user_response):
     #below are the if statement in get_bot_response() for scripted conversation purposes
     # if "what is your name" is heard in user_response google_audio recording:
     if "what is your name" in user_response:
-        return friday("My name is Vreea. My name stands for Voice Recognition Emotions and Entertainment Assistant. I am a voice bot created by Aldrin Brillantay.")
+        return vreea("My name is Vreea. My name stands for Voice Recognition Emotions and Entertainment Assistant. I am a chat bot created by Aldrin Brillantay.")
     elif "what is your purpose" in user_response:
-        return friday("My purpose of creation is to give Aldrin Brillantay a good grade in school. I serve other purposes as well. I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food. Would you like to talk about food?")
+        return vreea("My purpose of creation is to give Aldrin Brillantay a good grade in school. I serve other purposes as well. Would you like to hear the conversation menu? If you would like to hear the conversation menu, please say: Show me the menu.")
+
+
+
+
+
+        #I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food. Would you like to talk about food?")
     elif "I would love to talk about food" in user_response:
-        return friday("Okay great! What do you like better? Pizza or Calzones?")
+        return vreea("Okay great! What do you like better? Pizza or Calzones?")
     elif "I like pizza" in user_response:
-        return friday(good) 
+        return vreea(good) 
     elif "I like calzones" in user_response:
-        return friday(bad)
+        return vreea(bad)
     elif 'search' in user_response:
-        friday("What do you want to search for?")
+        vreea("What do you want to search for?")
         search = record_audio("Please say what you want to search for: ")
         url = "https://google.com/search?q=" + search
         webbrowser.get().open(url)
-        return friday("Here is what I found for " + search)
+        return vreea("Here is what I found for " + search)
     elif 'find location' in user_response:
         location = record_audio("What is the location?: ")
         url = "https://google.nl/maps/place/" + location + "/&amp;"
         webbrowser.get().open(url)
-        return friday("Here is the location of " + location)
+        return vreea("Here is the location of " + location)
     elif 'find place' in user_response:
         location = record_audio("What is the location?: ")
         url = "https://google.nl/maps/search/" + location + "/&amp;"
         webbrowser.get().open(url)
-        return friday("Here is the location of " + location)
+        return vreea("Here is the location of " + location)
+    elif 'find youtube video' in user_response:
+        video = record_audio("What is the video topic you are looking for?: ")
+        url = "http://www.youtube.com/results?search_query=" + video + "/&amp;"
+        webbrowser.get().open(url)
+        return vreea("Here is the youtube search result of " + video)
     elif "exit" in user_response:
-        friday("I understand. I will be leaving you now. Have an amazing rest of your day.")
+        vreea("I understand. I will be leaving you now. Have an amazing rest of your day.")
         return exit() #exits function, while loop, and program upon command
+        
+        

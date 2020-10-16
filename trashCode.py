@@ -10,20 +10,20 @@
 def male():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
-        return friday("Good morning sir!")
+        return vreea("Good morning sir!")
     elif hour>= 12 and hour < 18:
-        return friday("Good afternoon sir!")
+        return vreea("Good afternoon sir!")
     else:
-        return friday("Good evening sir!")
+        return vreea("Good evening sir!")
 # this is the function that acts when user responds to being 'female' onto terminal
 def female():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
-        return friday("Good morning madam!")
+        return vreea("Good morning madam!")
     elif hour>= 12 and hour < 18:
-        return friday("Good afternoon madam!")
+        return vreea("Good afternoon madam!")
     else:
-        return friday("Good evening madam!")
+        return vreea("Good evening madam!")
 
 
 ##########################################################################################################

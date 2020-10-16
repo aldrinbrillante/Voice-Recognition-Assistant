@@ -42,7 +42,7 @@ import pygame
 
 
 ##########################################################################################################
-# Import all your needed files/functions into this main program, FRIDAY.py
+# Import all your needed files/functions into this main program, vreea.py
 ###########################################################################################################
 
 from introduction import intro
@@ -83,9 +83,9 @@ def record_audio(ask=False): #setting optional ask argument to False
 
 
 ###############################################################################################################
-# this will be friday's playsound function; uses a temp saved audio file and then deletes it upon 'exit' command 
+# this will be vreea's playsound function; uses a temp saved audio file and then deletes it upon 'exit' command 
 ################################################################################################################
-def friday(audio_string):
+def vreea(audio_string):
     tts = gTTS(text=audio_string, lang='en') 
     r = random.randint(1, 10000000)
     audio_file = "audio-" + str(r) + ".mp3"
@@ -112,19 +112,20 @@ pygame.quit()
 ##########################################################################################################
 #  extra temp notes:
 # while loop 
-# while image is open, then FRIDAY 
+# while image is open, then vreea 
 # 
 #############################################################################
 
-#friday('Hello! Are you a male or a female?')
-#friday('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
-#friday('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
-friday('which one do you consider yourself as?')
+#vreea('Hello! Are you a male or a female?')
+#vreea('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
+#vreea('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
+vreea('which one do you consider yourself as?')
 
 #now, we are creating a while loop to continuously have computer listen to what I am saying
 time.sleep(1) #waits however many seconds we want
 
 #while loop to allow program to continue to listen to user and respond + records and deletes audio once finished
+
 while 1:
     user_response = record_audio()
     intro(user_response)

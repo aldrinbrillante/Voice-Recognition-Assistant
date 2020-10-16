@@ -4,6 +4,6 @@ import pygame
 
 pygame.display.set_caption('My video!')
 
-clip = VideoFileClip('friday.mov')
+clip = VideoFileClip('vreea.mov')
 clip.preview()
 pygame.quit()
