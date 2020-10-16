@@ -75,7 +75,7 @@ def gen_response(user_response):
     #below are the if statement in get_bot_response() for scripted conversation purposes
     # if "what is your name" is heard in user_response google_audio recording:
     if "what is your name" in user_response:
-        return friday("My name is Friday. I am a chat bot created by Aldrin Brillantay.")
+        return friday("My name is Vreea. My name stands for Voice Recognition Emotions and Entertainment Assistant. I am a voice bot created by Aldrin Brillantay.")
     elif "what is your purpose" in user_response:
         return friday("My purpose of creation is to give Aldrin Brillantay a good grade in school. I serve other purposes as well. I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food. Would you like to talk about food?")
     elif "I would love to talk about food" in user_response:

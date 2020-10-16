@@ -64,7 +64,7 @@ def female():
 # this is the function that runs when user responds "I decline to answer"
 ###########################################################################################################
 def decline_to_answer():
-    hour = int(datetime.datetime.now().hour)
+    hour = int(datetime.datetime.now().hour) 
     if hour>=0 and hour<12:
         friday("Okay then. Well, good morning to you, you beautiful human being!")
         friday("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
