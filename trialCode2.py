@@ -1,57 +1,23 @@
-##########################################################################################################
-# Initial Imports needed to create voice chat bot
-###########################################################################################################
+
 import os
-from os import system #this is a core python package
-import random #you want to randomly generate a file name for the audio file
-
-#make sure to have python 3 interpreter ctrl+shift+P 
-#pip3 install speechrecognition
-#this is google's library performing speech recog API
+from os import system
+import random 
 import speech_recognition as sr
-
-#python time() and datetime() methods for current
 import time
 import datetime
-
 import tkinter
-
-# from tkinter import all
 from tkinter import *
-
 from PIL import ImageTk,Image
-
-
-# pip3 install pyaudio
-# installs required pyaudio which is 
-# needed to use the microphone
-import pyaudio
-
-# import webbrowser package 
+import pyaudio 
 import webbrowser
-# pip3 install gTTS : use google text to speech interface; whatever we pass in as text, it will create an audio file to speak
 from gtts import gTTS
-# pip3 install playsound : make sure to also use another package called 'playsound.' If we don't use this, itll open up your defauly sound/audio player to respond... and we don't want that.
 import playsound
-# pip3 install pyobjc : this has app kit that playsound depends on. PyObjC is a bridge between Python and Objective-C. 
 import PyObjCTools 
-
-# pip3 install moviepy
 from moviepy.editor import VideoFileClip
 import pygame
-
-
-##########################################################################################################
-# Import all your needed files/functions into this main program, vreea.py
-###########################################################################################################
-
 from introduction import intro
 from general_response import gen_response
 
-##########################################
-# initialize recognizer
-# responsible for recognizing speech 
-##########################################
 r = sr.Recognizer()
 
 ##########################################
@@ -99,7 +65,6 @@ def vreea(audio_string):
 ###########################################################################################################
 
 pygame.display.set_caption('VREEA') #Voice Recognition Emotions & Entertainment Assistant
-
 clip = VideoFileClip('vreea.mov')
 clip.preview()
 pygame.quit()
@@ -115,6 +80,8 @@ pygame.quit()
 # while image is open, then vreea 
 # incorporate  keeping indow into game loop 
 # cowork: inc t2s into game loop of vreea 
+
+# i want the function to work when display is laoded
 #############################################################################
 
 #vreea('Hello! Are you a male or a female?')
