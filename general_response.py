@@ -97,17 +97,20 @@ def gen_response(user_response):
         webbrowser.get().open(url)
         return vreea("Here is what I found for " + search)
     elif 'find location' in user_response:
-        location = record_audio("What is the location?: ")
+        vreea("What is the location?: ")
+        location = record_audio()
         url = "https://google.nl/maps/place/" + location + "/&amp;"
         webbrowser.get().open(url)
         return vreea("Here is the location of " + location)
     elif 'find place' in user_response:
-        location = record_audio("What is the location?: ")
+        vreea("What is the place you are looking for?: ")
+        location = record_audio()
         url = "https://google.nl/maps/search/" + location + "/&amp;"
         webbrowser.get().open(url)
         return vreea("Here is the location of " + location)
-    elif 'find youtube video' in user_response:
-        video = record_audio("What is the video topic you are looking for?: ")
+    elif 'find video' in user_response:
+        vreea("What is the video topic you are looking for?: ")
+        video = record_audio()
         url = "http://www.youtube.com/results?search_query=" + video + "/&amp;"
         webbrowser.get().open(url)
         return vreea("Here is the youtube search result of " + video)
