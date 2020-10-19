@@ -119,10 +119,8 @@ def show_video():
 # Main function that contains all conversation functions
 def main ():
     #vreea('Hello. My name is Vreea. I am your voice recognition emotions and entertainment assistant.')
-    #vreea('Are you a male or a female?')
-    #vreea('If you are a male, please respond to me and say: I am a male. If you are a woman, please respond to me and say: I am a female. Also, ')
-    #vreea('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
-    vreea('which one do you consider yourself as?')
+    #vreea('Are you a male or a female? If you are a male, say: I am a male. If you are a woman, say: I am a female. If you do not want to label yourself and decline to answer, then say: I decline to answer.')
+    vreea('So, which one do you consider yourself as?')
 
 
     #now, we are creating a while loop to continuously have computer listen to what I am saying

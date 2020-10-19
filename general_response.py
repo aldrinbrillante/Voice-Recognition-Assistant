@@ -76,9 +76,9 @@ def gen_response(user_response):
     #below are the if statement in get_bot_response() for scripted conversation purposes
     # if "what is your name" is heard in user_response google_audio recording:
     if "what is your name" in user_response:
-        return vreea("My name is Vreea. My name stands for Voice Recognition Emotions and Entertainment Assistant. I am a chat bot created by Aldrin Brillantay.")
+        return vreea("My name is Vreea. My name stands for Voice Recognition Emotions and Entertainment Assistant. I am a chat bot created by Aldrin Brillantay. How may I help you?")
     elif "what is your purpose" in user_response:
-        return vreea("My purpose of creation is to be a beta version for Aldrin Brillantay's goal of creating Baymax, Disney's personal healthcare companion from the movie, Big Hero 6.")
+        return vreea("My purpose of creation is to be a beta version for Aldrin Brillantay's goal of creating Baymax, Disney's personal healthcare companion from the movie, Big Hero 6. So, how else may I help you?")
   
 
     elif "program menu" in user_response:
@@ -99,39 +99,45 @@ def gen_response(user_response):
         return vreea("So, tell me about your day")
     elif "talking complete" in user_response:
         vreea(good)
-        return vreea("Happy to have had this conversation with you. So, how else may I help you?")
+        return vreea("Happy to have had this conversation with you. If you would like to share about something else, simply say: share my day again. So, how else may I help you?")
 
     elif "can I complain" in user_response:
         vreea("Of course! You can vent to me about anything! Please start talking and I will be listening. When you are done venting to me, pause for 3-5 seconds, and then say: complaining complete.")
         return vreea("So, what do you want to vent about?")
     elif "complaining complete" in user_response:
         vreea(bad)
-        return vreea("Thank you for sharing that to me. It makes me happy to be your friend in this. So, how else may I help you?")
+        return vreea("Thank you for sharing that to me. It makes me happy to be your friend in this. If you would like to complain about something else, simply say: can I complain again. So, how else may I help you?")
 
     elif 'search' in user_response:
         vreea("What do you want to search for?")
         search = record_audio("Please say what you want to search for: ")
         url = "https://google.com/search?q=" + search
         webbrowser.get().open(url)
-        return vreea("Here is what I found for " + search)
+        vreea("Here is what I found for " + search)
+        return vreea("Please let me know if there is anything else I can help you with")
     elif 'find location' in user_response:
         vreea("What is the location?: ")
         location = record_audio()
         url = "https://google.nl/maps/place/" + location + "/&amp;"
         webbrowser.get().open(url)
-        return vreea("Here is the location of " + location)
+        vreea("Here is the location of " + location)
+        return vreea("Please let me know if there is anything else I can help you with")
     elif 'find place' in user_response:
         vreea("What is the place you are looking for?: ")
         location = record_audio()
         url = "https://google.nl/maps/search/" + location + "/&amp;"
         webbrowser.get().open(url)
-        return vreea("Here is the location of " + location)
+        vreea("Here is the location of " + location)
+        return vreea("Please let me know if there is anything else I can help you with")
     elif 'find video' in user_response:
         vreea("What is the video topic you are looking for?: ")
         video = record_audio()
         url = "http://www.youtube.com/results?search_query=" + video + "/&amp;"
         webbrowser.get().open(url)
-        return vreea("Here is the youtube search result of " + video)
+        vreea("Here is the youtube search result of " + video)
+        return vreea("Please let me know if there is anything else I can help you with")
+    elif 'play game' in user_response:
+        return vreea("I apologize. The gaming sector of my program is currently under maintenance. Thank you for your patience. How else can I help you?")
     elif "exit" in user_response:
         vreea("I understand. I will be leaving you now. I wish you an amazing rest of your day.")
         pygame.quit() #exits pygame window displayed
