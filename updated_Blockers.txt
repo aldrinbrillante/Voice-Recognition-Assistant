@@ -1,0 +1,1 @@
+Pygame: Undefined variable 'pygame'pylint(undefined-variable)
