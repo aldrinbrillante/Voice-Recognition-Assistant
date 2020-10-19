@@ -1,9 +1,9 @@
-### MS-Intensive-1.1
+# MS-Intensive-1.1
 
  ## run vreea.py to start program
 
  MS Intensive 1.1 Passion Project
 
 
-# ***Language used: Python***
+### ***Language used: Python***
 
