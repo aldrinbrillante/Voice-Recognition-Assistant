@@ -27,15 +27,15 @@ def male():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
         vreea("Good morning sir!")
-        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: tell me your menu.")
         return vreea("So, how may I help you?")
     elif hour>= 12 and hour < 18:
         vreea("Good afternoon sir!")
-        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: tell me your menu.")
         return vreea("So, how may I help you?")
     else:
         vreea("Good evening sir!")
-        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: tell me your menu.")
         return vreea("So, how may I help you?")
 
 
@@ -47,15 +47,15 @@ def female():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
         vreea("Good morning madam!")
-        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: tell me your menu.")
         return vreea("So, how may I help you?")
     elif hour>= 12 and hour < 18:
         vreea("Good afternoon madam!")
-        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: tell me your menu.")
         return vreea("So, how may I help you?")
     else:
         vreea("Good evening madam!")
-        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: tell me your menu.")
         return vreea("So, how may I help you?")
 
 
@@ -67,15 +67,15 @@ def decline_to_answer():
     hour = int(datetime.datetime.now().hour) 
     if hour>=0 and hour<12:
         vreea("Okay then. Well, good morning to you, you beautiful human being!")
-        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: tell me your menu.")
         return vreea("So, how may I help you?")
     elif hour>= 12 and hour < 18:
         vreea("Okay then. Well, Good afternoon to you, you beautiful human being!")
-        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: tell me your menu.")
         return vreea("So, how may I help you?")
     else:
         vreea("Okay then. Well, Good evening to you, you beautiful human being!")
-        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: tell me your menu.")
         return vreea("So, how may I help you?")
 
 

@@ -69,27 +69,35 @@ def record_audio(ask=False): #setting optional ask argument to False
 Insert Coversation Menu via text here: 
 "Okay. Let me tell you your options of conversation.
 You can also view the Conversation Menu text file on my program as I continue to read you the menu.
-I am here for all of your emotional and entertainment needs.
-Please wait for me to finish talking before you respond.
+I am here for your emotional and entertainment needs.
+I ask that you please wait for me to finish talking before you respond.
 You will know that I finished talking once I ask:
 'So, how may I help you today?'
 
 Topics of conversation include:
 
 Talking, or venting, about your day.
-Discussing your plans for the weekend.
 Rating your current emotions from a scale of one to ten. 
 Requesting to search the web.
-Requesting to find a certain location or place aodjflasdfjasdf.
+Requesting to find a certain locations or places using Google's GPS software.
 Requesting to find a Youtube video.
+Playing games for a means of personal entertainment
 
 
-If you would like to vent and complain to me about your day, please sa
-
+If you would like to... please say...
+1) Talk to me about your day: 'Can I tell you about my day?'
+2) Vent/Complain: 'I would like to complain'
+3) Search the web: 'search'
+4) Find location: 'find location'
+5) Find place: 'find place'
+6) Find video: 'find video'
+7) Exit program: 'exit'
 
 emotions: if 1- 5 rate, watch youtube
 if 6-10, 
 
 '''
-vreea("Okay. Let me tell you your options of conversation")
-vreea("Okay test 1 2 3 4 ")
+
+def convo_menu():
+    vreea("Okay. Let me tell you your options of conversation")
+    vreea("Topics of conversation include: talking, or venting about your day, rating your current emotions, searching the web, requesting to find a certain location or place, finding a you tube video, or playing games for the means of entertainment purposes.")

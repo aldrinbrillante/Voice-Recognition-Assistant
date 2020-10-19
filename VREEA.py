@@ -116,23 +116,19 @@ def show_video():
     video_thread.start()
     play_video()
 
-# Main function
+# Main function that contains all conversation functions
 def main ():
-    vreea('Hello. My name is Vreea. I am your voice recognition emotions and entertainment assistant.')
-    vreea('Are you a male or a female?')
-    vreea('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
-    vreea('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
+    #vreea('Hello. My name is Vreea. I am your voice recognition emotions and entertainment assistant.')
+    #vreea('Are you a male or a female?')
+    #vreea('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
+    #vreea('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
     vreea('which one do you consider yourself as?')
 
-    #video_thread = threading.Thread(target=play_video())
-    #video_thread.start()
-   
 
-
-#now, we are creating a while loop to continuously have computer listen to what I am saying
+    #now, we are creating a while loop to continuously have computer listen to what I am saying
     time.sleep(1) #waits however many seconds we want
 
-#while loop to allow program to continue to listen to user and respond + records and deletes audio once finished 
+    #while loop to allow program to continue to listen to user and respond + records and deletes audio once finished 
     while 1:
         user_response = record_audio()
         intro(user_response)
