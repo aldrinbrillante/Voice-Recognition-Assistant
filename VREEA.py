@@ -19,7 +19,7 @@ import tkinter
 # from tkinter import all
 from tkinter import *
 
-from PIL import ImageTk,Image
+#from PIL import ImageTk,Image
 
 
 # pip3 install pyaudio
@@ -40,7 +40,7 @@ import PyObjCTools
 from moviepy.editor import VideoFileClip
 import pygame
 
-
+import threading
 ##########################################################################################################
 # Import all your needed files/functions into this main program, vreea.py
 ###########################################################################################################
@@ -98,8 +98,8 @@ def vreea(audio_string):
 # create main bot screen for chat bot 
 ###########################################################################################################
 
-pygame.display.set_caption('VREEA') #Voice Recognition Emotions & Entertainment Assistant
 
+pygame.display.set_caption('VREEA') #Voice Recognition Emotions & Entertainment Assistant
 clip = VideoFileClip('vreea.mov')
 clip.preview()
 pygame.quit()
@@ -117,7 +117,7 @@ pygame.quit()
 # cowork: inc t2s into game loop of vreea 
 #############################################################################
 
-#vreea('Hello! Are you a male or a female?')
+vreea('Hello! My name is Vreea. I am a voice recognition emotions and entertainment assistant.')
 #vreea('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
 #vreea('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
 vreea('which one do you consider yourself as?')
@@ -125,7 +125,8 @@ vreea('which one do you consider yourself as?')
 #now, we are creating a while loop to continuously have computer listen to what I am saying
 time.sleep(1) #waits however many seconds we want
 
-#while loop to allow program to continue to listen to user and respond + records and deletes audio once finished
+#while loop to allow program to continue to listen to user and respond + records and deletes audio once finished\
+# 
 while 1:
     user_response = record_audio()
     intro(user_response)
