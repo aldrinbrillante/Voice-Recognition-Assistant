@@ -14,14 +14,6 @@ import speech_recognition as sr
 import time
 import datetime
 
-import tkinter
-
-# from tkinter import all
-from tkinter import *
-
-#from PIL import ImageTk,Image
-
-
 # pip3 install pyaudio
 # installs required pyaudio which is 
 # needed to use the microphone
@@ -117,18 +109,56 @@ pygame.quit()
 # cowork: inc t2s into game loop of vreea 
 #############################################################################
 
+<<<<<<< HEAD
+def show_video():
+    video_thread = threading.Thread(target=main)
+    video_thread.start()
+    play_video()
+
+# Main function
+def main ():
+    vreea('Hello. My name is Vreea. I am your voice recognition emotions and entertainment assistant.')
+    vreea('Are you a male or a female?')
+    vreea('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
+    vreea('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
+    vreea('which one do you consider yourself as?')
+
+    #video_thread = threading.Thread(target=play_video())
+    #video_thread.start()
+   
+
+=======
 vreea('Hello! My name is Vreea. I am a voice recognition emotions and entertainment assistant.')
 #vreea('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
 #vreea('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
 vreea('which one do you consider yourself as?')
+>>>>>>> parent of 8ce2061... editing conversation
 
 #now, we are creating a while loop to continuously have computer listen to what I am saying
 time.sleep(1) #waits however many seconds we want
 
+<<<<<<< HEAD
+#while loop to allow program to continue to listen to user and respond + records and deletes audio once finished 
+    while 1:
+        user_response = record_audio()
+        intro(user_response)
+        gen_response(user_response)
+
+
+
+if  __name__ == "__main__":
+    video_thread = threading.Thread(target=main)
+    video_thread.start()
+    play_video()
+
+
+
+=======
 #while loop to allow program to continue to listen to user and respond + records and deletes audio once finished\
 # 
 while 1:
     user_response = record_audio()
     intro(user_response)
     gen_response(user_response)
+>>>>>>> parent of 8ce2061... editing conversation
 
