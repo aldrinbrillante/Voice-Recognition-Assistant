@@ -91,10 +91,12 @@ def vreea(audio_string):
 ###########################################################################################################
 
 
-pygame.display.set_caption('VREEA') #Voice Recognition Emotions & Entertainment Assistant
-clip = VideoFileClip('vreea.mov')
-clip.preview()
-pygame.quit()
+def play_video ():
+
+    pygame.display.set_caption('VREEA') #Voice Recognition Emotions & Entertainment Assistant
+    clip = VideoFileClip('vreea.mov')
+    clip.preview()
+    pygame.quit()
 
 ##########################################################################################################
 # Initial script when chat bot program is running
@@ -109,7 +111,6 @@ pygame.quit()
 # cowork: inc t2s into game loop of vreea 
 #############################################################################
 
-<<<<<<< HEAD
 def show_video():
     video_thread = threading.Thread(target=main)
     video_thread.start()
@@ -127,17 +128,10 @@ def main ():
     #video_thread.start()
    
 
-=======
-vreea('Hello! My name is Vreea. I am a voice recognition emotions and entertainment assistant.')
-#vreea('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
-#vreea('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
-vreea('which one do you consider yourself as?')
->>>>>>> parent of 8ce2061... editing conversation
 
 #now, we are creating a while loop to continuously have computer listen to what I am saying
-time.sleep(1) #waits however many seconds we want
+    time.sleep(1) #waits however many seconds we want
 
-<<<<<<< HEAD
 #while loop to allow program to continue to listen to user and respond + records and deletes audio once finished 
     while 1:
         user_response = record_audio()
@@ -153,12 +147,4 @@ if  __name__ == "__main__":
 
 
 
-=======
-#while loop to allow program to continue to listen to user and respond + records and deletes audio once finished\
-# 
-while 1:
-    user_response = record_audio()
-    intro(user_response)
-    gen_response(user_response)
->>>>>>> parent of 8ce2061... editing conversation
 
