@@ -9,6 +9,8 @@ from gtts import gTTS
 import playsound
 import webbrowser
 
+from convo_menu import convo_menu
+
 #make sure to have python 3 interpreter ctrl+shift+P 
 #pip3 install speechrecognition
 #this is google's library performing speech recog API
@@ -77,13 +79,13 @@ def gen_response(user_response):
     if "what is your name" in user_response:
         return vreea("My name is Vreea. My name stands for Voice Recognition Emotions and Entertainment Assistant. I am a chat bot created by Aldrin Brillantay.")
     elif "what is your purpose" in user_response:
-        return vreea("My purpose of creation is to be a beta version for Aldrin Brillantay's dream of creating Baymax, Disney's personal healthcare companion from the movie, Big Hero 6.")
+        return vreea("My purpose of creation is to be a beta version for Aldrin Brillantay's goal of creating Baymax, Disney's personal healthcare companion from the movie, Big Hero 6.")
         #I serve other purposes as well. Would you like to hear the conversation menu? If you would like to hear the conversation menu, please say: Show me the menu.")
 
 
         #I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food. Would you like to talk about food?")
     elif "Tell me your menu" in user_response:
-        return vreea("Okay great! What do you like better? Pizza or Calzones?")
+        return convo_menu
     elif "I like pizza" in user_response:
         return vreea(good) 
     elif "I like calzones" in user_response:

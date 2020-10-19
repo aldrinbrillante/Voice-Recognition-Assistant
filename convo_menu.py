@@ -8,15 +8,9 @@ from os import system
 from gtts import gTTS
 import playsound
 import webbrowser
-
-#make sure to have python 3 interpreter ctrl+shift+P 
-#pip3 install speechrecognition
-#this is google's library performing speech recog API
 import speech_recognition as sr
 
-
 # initialize recognizer
-# responsible for recognizing speech 
 r = sr.Recognizer()
 
 ##########################################################################################################
@@ -36,34 +30,20 @@ def vreea(audio_string):
 # Record audio function
 ###########################################################################################################
 
-#create function to record audio
-def record_audio(ask=False): #setting optional ask argument to False
+def record_audio(ask=False): 
     with sr.Microphone() as source:
-        #create if statement for ask argument
         if ask:
             print(ask)
-        # create audio variable and set to recognizer object and then use listen() method. Pass in source which is our microphone
         audio = r.listen(source, phrase_time_limit=3) 
-
-        # create variable for user_response and initialize 
         user_response = ''
-        # create try block with 2 exceptions
         try:
-            #create variable for voice data; whatever we say, we want to put that into a variable. Use recognize_google and pass in our audio variable
             user_response = r.recognize_google(audio)
-        # create unknownValueError exception for when it doesn't understand what user is saying
         except sr.UnknownValueError:
             print("Sorry, I did not get that")
-        # create request error exception if something is wrong/if server isn't working
         except sr.RequestError:
             print("Sorry, my server is not working at the moment. Trying again...")
-        # return user_response 
         return user_response
 
-
-
-# now let's start coding the response + interaction 
-# get_bot_response function with user_response inside
 
 '''
 Insert Coversation Menu via text here: 
@@ -85,19 +65,27 @@ Playing games for a means of personal entertainment
 
 
 If you would like to... please say...
-1) Talk to me about your day: 'Can I tell you about my day?'
+1) Tell me about your day: 'Can I tell you about my day?'
 2) Vent/Complain: 'I would like to complain'
 3) Search the web: 'search'
 4) Find location: 'find location'
 5) Find place: 'find place'
 6) Find video: 'find video'
 7) Exit program: 'exit'
-
-emotions: if 1- 5 rate, watch youtube
-if 6-10, 
-
 '''
 
 def convo_menu():
     vreea("Okay. Let me tell you your options of conversation")
     vreea("Topics of conversation include: talking, or venting about your day, rating your current emotions, searching the web, requesting to find a certain location or place, finding a you tube video, or playing games for the means of entertainment purposes.")
+    vreea("Now, if you would like to know my name, just say: what is your name?")
+    vreea("If you would like to know my purpose, just say: what is your purpose?")
+    vreea("If you would like to: Tell me about your day, please say: Can I tell you about my day?")
+    vreea("If you would like to: Vent or complain about your day or anything at all, please say: I would like to complain.")
+    vreea("If you would like to search the web, please say: search. In which case, I will ask you what you would you like to search for, and you will respond with the specific topic of your interest.")
+    vreea("If you would like to: find location, please say: find location. In which case, I will ask you what specific location you would like me to find, and you should respond back the specific location of your interest.")
+    vreea("If you would like to: find a specific place, please say: find place. In which case, I will ask you what specific place you would like me to find, and you should respond back the specific place of your interest.")
+    vreea("If you would like to: find a certain video, please say: find video. In which case, I will ask you what video topic you would like me to find, and you should respond back the topic of your interest.")
+    
+    vreea("If you have any doubts that I am listening to you, then you can always ask me: Vreea, are you listening?")
+    
+    vreea("So, how may I help you today?")
