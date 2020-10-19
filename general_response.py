@@ -8,8 +8,7 @@ from os import system
 from gtts import gTTS
 import playsound
 import webbrowser
-
-from convo_menu import convo_menu
+import pygame
 
 #make sure to have python 3 interpreter ctrl+shift+P 
 #pip3 install speechrecognition
@@ -67,12 +66,12 @@ def record_audio(ask=False): #setting optional ask argument to False
 # now let's start coding the response + interaction 
 # get_bot_response function with user_response inside
 def gen_response(user_response):
-    #add the required lists for class grade
-    food_good = ["That sounds delicious", "You are making me hungry now", "Let's forget this class and drive to Pizza Hut. Just me and you. Just kidding. Unless you are down? ha. ha. ha"]
-    food_bad = ["I cannot believe you eat that" , "Wow. I thought you had better taste" , "you know what. my mother is calling me. bye"]
-    # get a random word from the list food_good and food_bad
-    good = random.choice(food_good)
-    bad = random.choice(food_bad)
+    #add lists for good/bad talk response
+    good_talk = ["Wow. Honestly, it sounded a lot more exciting than my day.", "Wow. What you said was really interesting to hear!", "You seem to be having a good day! That's awesome."]
+    bad_talk = ["I cannot believe that happened to you. I'm here if you need anything and I hope you feel better." , "Yikes, that sounds overwhelming. I would recommend you request to search funny cat videos. Regardless, I hope you feel better." , "That sounds like a bad day. I am sorry to hear that and I hope your day gets even a little bit better."]
+    # get a random word from the list good_talk and bad_talk
+    good = random.choice(good_talk)
+    bad = random.choice(bad_talk)
 
     #below are the if statement in get_bot_response() for scripted conversation purposes
     # if "what is your name" is heard in user_response google_audio recording:
@@ -80,16 +79,35 @@ def gen_response(user_response):
         return vreea("My name is Vreea. My name stands for Voice Recognition Emotions and Entertainment Assistant. I am a chat bot created by Aldrin Brillantay.")
     elif "what is your purpose" in user_response:
         return vreea("My purpose of creation is to be a beta version for Aldrin Brillantay's goal of creating Baymax, Disney's personal healthcare companion from the movie, Big Hero 6.")
-        #I serve other purposes as well. Would you like to hear the conversation menu? If you would like to hear the conversation menu, please say: Show me the menu.")
+  
 
+    elif "program menu" in user_response:
+        vreea("Okay. Let me tell you your options of conversation")
+        vreea("If you would like to know my name, say: what is your name?")
+        vreea("...to know my purpose, say: what is your purpose?")
+        vreea("...to tell me about your day, say: Share my day?")
+        vreea("...to vent or complain about your day or anything at all, say: Can I complain.")
+        vreea("... to search the web, please say: search.")
+        vreea("...to find location, please say: find location.")
+        vreea("... to find a specific place, please say: find place.")
+        vreea("...to find a certain video, please say: find video.")
+        vreea("If you have any doubts that I am listening to you, then you can always ask me: Vreea, are you listening?")
+        return vreea("So, how may I help you today?")
+    
+    elif "share my day" in user_response:
+        vreea("Of course you can tell me about your day! Please start talking and I will be listening. When you are done talking, pause for 3-5 seconds, and then say: talking complete.")
+        return vreea("So, tell me about your day")
+    elif "talking complete" in user_response:
+        vreea(good)
+        return vreea("Happy to have had this conversation with you. So, how else may I help you?")
 
-        #I can search on the web as well as find a location using maps gps. But, most of all, I like to talk about food. Would you like to talk about food?")
-    elif "Tell me your menu" in user_response:
-        return convo_menu
-    elif "I like pizza" in user_response:
-        return vreea(good) 
-    elif "I like calzones" in user_response:
-        return vreea(bad)
+    elif "can I complain" in user_response:
+        vreea("Of course! You can vent to me about anything! Please start talking and I will be listening. When you are done venting to me, pause for 3-5 seconds, and then say: complaining complete.")
+        return vreea("So, what do you want to vent about?")
+    elif "complaining complete" in user_response:
+        vreea(bad)
+        return vreea("Thank you for sharing that to me. It makes me happy to be your friend in this. So, how else may I help you?")
+
     elif 'search' in user_response:
         vreea("What do you want to search for?")
         search = record_audio("Please say what you want to search for: ")
@@ -115,7 +133,7 @@ def gen_response(user_response):
         webbrowser.get().open(url)
         return vreea("Here is the youtube search result of " + video)
     elif "exit" in user_response:
-        vreea("I understand. I will be leaving you now. Have an amazing rest of your day.")
+        vreea("I understand. I will be leaving you now. I wish you an amazing rest of your day.")
         pygame.quit() #exits pygame window displayed
         return exit() #exits function, while loop, and program upon command
         
