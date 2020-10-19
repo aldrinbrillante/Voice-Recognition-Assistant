@@ -136,6 +136,14 @@ def gen_response(user_response):
         webbrowser.get().open(url)
         vreea("Here is the youtube search result of " + video)
         return vreea("Please let me know if there is anything else I can help you with")
+    elif 'play music' in user_response:
+        url = "https://www.youtube.com/watch?v=5qap5aO4i9A"
+        webbrowser.get().open(url)
+        return vreea("Let me know if there is anything else I can help you with")
+    elif 'watch netflix' in user_response:
+        url = "https://www.netflix.com/browse"
+        webbrowser.get().open(url)
+        return vreea("Let me know if there is anything else I can help you with")
     elif 'play game' in user_response:
         return vreea("I apologize. The gaming sector of my program is currently under maintenance. Thank you for your patience. How else can I help you?")
     elif "exit" in user_response:
