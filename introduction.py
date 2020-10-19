@@ -76,7 +76,7 @@ def decline_to_answer():
     else:
         #vreea("Okay then. Well, Good evening to you, you beautiful human being!")
         #vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: program menu.")
-        return vreea("So, how may I help you?")
+        return vreea("Okay then. So, how may I help you?")
 
 
 ##########################################################################################################

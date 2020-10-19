@@ -78,7 +78,7 @@ def gen_response(user_response):
     if "what is your name" in user_response:
         return vreea("My name is Vreea. My name stands for Voice Recognition Emotions and Entertainment Assistant. I am a chat bot created by Aldrin Brillantay. How may I help you?")
     elif "what is your purpose" in user_response:
-        return vreea("My purpose of creation is to be a beta version for Aldrin Brillantay's goal of creating Baymax, Disney's personal healthcare companion from the movie, Big Hero 6. So, how else may I help you?")
+        return vreea("My purpose of creation is to be a beta version for Aldrin Brillantay's goal of creating a fully functional emotion and entertainment assistant. So, how else may I help you?")
   
 
     elif "program menu" in user_response:
@@ -140,7 +140,7 @@ def gen_response(user_response):
         url = "https://www.youtube.com/watch?v=5qap5aO4i9A"
         webbrowser.get().open(url)
         return vreea("Let me know if there is anything else I can help you with")
-    elif 'watch netflix' in user_response:
+    elif 'play movies' in user_response:
         url = "https://www.netflix.com/browse"
         webbrowser.get().open(url)
         return vreea("Let me know if there is anything else I can help you with")
@@ -149,6 +149,5 @@ def gen_response(user_response):
     elif "exit" in user_response:
         vreea("I understand. I will be leaving you now. I wish you an amazing rest of your day.")
         pygame.quit() #exits pygame window displayed
-        return exit() #exits function, while loop, and program upon command
-        
+        return exit() #exits function, while loop, and program upon command        
         
