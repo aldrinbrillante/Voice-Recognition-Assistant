@@ -120,7 +120,7 @@ def show_video():
 def main ():
     #vreea('Hello. My name is Vreea. I am your voice recognition emotions and entertainment assistant.')
     #vreea('Are you a male or a female?')
-    #vreea('If you are a male, please respond to me and say: I am a dude. If you are a woman, please respond to me and say: I am a woman. Also, ')
+    #vreea('If you are a male, please respond to me and say: I am a male. If you are a woman, please respond to me and say: I am a female. Also, ')
     #vreea('If you do not want to label yourself and decline to answer, then please respond to me and say: I decline to answer. So, ')
     vreea('which one do you consider yourself as?')
 
@@ -133,6 +133,7 @@ def main ():
         user_response = record_audio()
         intro(user_response)
         gen_response(user_response)
+        
 
 
 
