@@ -7,6 +7,7 @@
 
 
 ### ***Language used: Python***
+### Please don't forget to star project if you like it :) 
 
 This is a voice recognition input and outpt chat bot created by @dev Aldrin Brillante.
 When vreea.py is running, it will display a siri-like chat bot visual that will introduce itself and will instruct user what to do to talk to bot. 
