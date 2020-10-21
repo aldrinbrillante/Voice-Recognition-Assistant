@@ -3,10 +3,14 @@ If you would like to... please say...
 Name: "What is your name?"
 Purpose: "What is your purpose?"
 
-1) Talk about your day: 'Can I tell you about my day?'
-2) Vent/Complain: 'I would like to complain'
+Ask if Vreea is listening: "Vreea, are you listening? 
+
+1) Talk about your day: 'Share my day?'
+2) Vent/Complain: 'Can I complain'
 3) Search the web: 'search'
 4) Find location: 'find location'
 5) Find place: 'find place'
 6) Find video: 'find video'
-7) Exit program: 'exit'
+7) Play music: 'play music'
+8) Netflix: 'Play movies' 
+9) Exit program: 'exit'

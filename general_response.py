@@ -73,13 +73,14 @@ def gen_response(user_response):
     good = random.choice(good_talk)
     bad = random.choice(bad_talk)
 
-    #below are the if statement in get_bot_response() for scripted conversation purposes
+    #below are the if statement in vreea() for scripted conversation purposes
     # if "what is your name" is heard in user_response google_audio recording:
     if "what is your name" in user_response:
         return vreea("My name is Vreea. My name stands for Voice Recognition Emotions and Entertainment Assistant. I am a chat bot created by Aldrin Brillantay. How may I help you?")
     elif "what is your purpose" in user_response:
         return vreea("My purpose of creation is to be a beta version for Aldrin Brillantay's goal of creating a fully functional emotion and entertainment assistant. So, how else may I help you?")
-  
+    elif "Vreea, are you listening" is user_response: 
+        return vreea("Yes! I am listening to you, and I would love to continue our conversation. How may I help you?")
 
     elif "program menu" in user_response:
         vreea("Okay. Let me tell you your options of conversation")
