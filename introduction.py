@@ -66,16 +66,16 @@ def female():
 def decline_to_answer():
     hour = int(datetime.datetime.now().hour) 
     if hour>=0 and hour<12:
-        #vreea("Okay then. Well, good morning to you, you beautiful human being!")
-        #vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: program menu.")
+        vreea("Okay then. Well, good morning to you, you beautiful human being!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: program menu.")
         return vreea("So, how may I help you?")
     elif hour>= 12 and hour < 18:
-        #vreea("Okay then. Well, Good afternoon to you, you beautiful human being!")
-        #vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: program menu.")
+        vreea("Okay then. Well, Good afternoon to you, you beautiful human being!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: program menu.")
         return vreea("So, how may I help you?")
     else:
-        #vreea("Okay then. Well, Good evening to you, you beautiful human being!")
-        #vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: program menu.")
+        vreea("Okay then. Well, Good evening to you, you beautiful human being!")
+        vreea("How may I help you today? Now, you can simply speak your requests to me and I shall respond! If you would like to hear my conversation menu, simply say: program menu.")
         return vreea("Okay then. So, how may I help you?")
 
 
