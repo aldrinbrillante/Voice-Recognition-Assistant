@@ -1,4 +1,5 @@
-# MS-Intensive-1.1
+# MS Intensive 1.1: 
+# V.R.E.E.A. (Voice Recognition Emotions & Entertainment Assistant) 
 
  ## run vreea.py to start program
 
